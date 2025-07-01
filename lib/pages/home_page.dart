@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spendy_app/pages/sign_up.dart';
-import 'sign_up.dart'; 
+import 'sign_up.dart';
+import 'sign_in.dart';
 
 class home_page extends StatelessWidget {
   const home_page({super.key});
@@ -40,7 +41,14 @@ class home_page extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const sign_in(),
+                        ),
+                      );
+                    },
                     child: Text(
                       'Login',
                       style: TextStyle(fontSize: 16, color: Color(0xFF1D46B5)),
