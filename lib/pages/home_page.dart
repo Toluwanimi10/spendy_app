@@ -17,6 +17,12 @@ class home_page extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+              Image.asset(
+                'assets/Images/logo.png',
+                width: 35.99,
+                height: 35,
+              ),
+              SizedBox(width: 1),
                 Text(
                   ' Spendy',
                   style: TextStyle(

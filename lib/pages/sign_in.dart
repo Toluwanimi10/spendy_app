@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
+import 'password_recovery.dart';
 
 class sign_in extends StatelessWidget {
   const sign_in({super.key});
@@ -25,6 +26,8 @@ class sign_in extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset('assets/Images/logo.png', width: 35.99, height: 35),
+              SizedBox(width: 1),
               Text(
                 ' Spendy',
                 style: TextStyle(
@@ -138,12 +141,22 @@ class sign_in extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(width: 32),
-                Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xFF5F5F5F),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const password_recovery(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'Forgot Password?',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xFF5F5F5F),
+                    ),
                   ),
                 ),
               ],
@@ -169,7 +182,7 @@ class sign_in extends StatelessWidget {
               },
               child: Text(
                 'Login',
-                style: TextStyle(fontSize: 16, color: Colors.white,),
+                style: TextStyle(fontSize: 16, color: Colors.white),
               ),
             ),
           ),
@@ -192,10 +205,7 @@ class sign_in extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 20),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(
-                    color: Color(0xFF2962FF),
-                    width: 1,
-                  ),
+                  side: BorderSide(color: Color(0xFF2962FF), width: 1),
                 ),
               ),
               onPressed: () {},

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spendy_app/pages/Dashboard.dart';
 import 'home_page.dart';
 
 class sign_up extends StatelessWidget {
@@ -25,6 +26,12 @@ class sign_up extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset(
+                'assets/Images/logo.png',
+                width: 35.99,
+                height: 35,
+              ),
+              SizedBox(width: 1),
               Text(
                 ' Spendy',
                 style: TextStyle(
@@ -244,7 +251,7 @@ class sign_up extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const sign_up(),
+                          builder: (context) => const Dashboard(),
                         ),
                       );
                     },
