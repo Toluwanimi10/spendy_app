@@ -156,9 +156,51 @@ class Dashboard extends StatelessWidget {
               ),
             ),
           ),
-          
         ],
-
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Color(0xFFEAEFFF),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Color(0xFFFFFFFF),
+            borderRadius: BorderRadius.circular(100),
+            border: Border.all(color: Color(0xFFEAEFFF), width: 2),
+          ),
+          padding: const EdgeInsets.only(left: 32, right: 32),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                icon: Icon(Icons.flash_on, size: 32, color: Color(0xFF2962FF)),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.confirmation_number_outlined,
+                  size: 32,
+                  color: Color(0xFF2962FF),
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.credit_card,
+                  size: 32,
+                  color: Color(0xFF2962FF),
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.person,
+                  size: 32,
+                  color: Color(0xFF2962FF),
+                ),
+                onPressed: () {},
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
