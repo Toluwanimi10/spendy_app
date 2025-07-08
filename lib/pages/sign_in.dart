@@ -143,12 +143,13 @@ class sign_in extends StatelessWidget {
                 SizedBox(width: 32),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const password_recovery(),
-                      ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const password_recovery(),
+                    //   ),
+                    // );
+                    Navigator.pushNamed(context, '/password_recovery');
                   },
                   child: Text(
                     'Forgot Password?',

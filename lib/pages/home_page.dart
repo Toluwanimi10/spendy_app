@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spendy_app/pages/sign_up.dart';
-import 'sign_up.dart';
-import 'sign_in.dart';
+// import 'sign_up.dart';
+// import 'sign_in.dart';
 
 class home_page extends StatelessWidget {
   const home_page({super.key});
@@ -17,12 +17,8 @@ class home_page extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              Image.asset(
-                'assets/Images/logo.png',
-                width: 35.99,
-                height: 35,
-              ),
-              SizedBox(width: 1),
+                Image.asset('assets/Images/logo.png', width: 35.99, height: 35),
+                SizedBox(width: 1),
                 Text(
                   ' Spendy',
                   style: TextStyle(
@@ -48,12 +44,13 @@ class home_page extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const sign_in(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const sign_in(),
+                      //   ),
+                      // );
+                      Navigator.pushNamed(context, '/sign_in');
                     },
                     child: Text(
                       'Login',
@@ -74,12 +71,13 @@ class home_page extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const sign_up(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const sign_up(),
+                      //   ),
+                      // );
+                      Navigator.pushNamed(context, '/sign_up');
                     },
                     child: Text(
                       'Sign Up',

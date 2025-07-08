@@ -248,12 +248,13 @@ class sign_up extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Dashboard(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const Dashboard(),
+                      //   ),
+                      // );
+                      Navigator.pushNamed(context, '/dashboard');
                     },
                     child: Text(
                       'Sign Up',
